@@ -1,0 +1,71 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserSetting {
+  id: Int!
+  username: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  userId: Int!
+  receiveNotifications: Boolean!
+  receiveEmails: Boolean!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type User {
+  id: Int!
+  username: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  displayName: String
+  settings: UserSetting
+}
+
+type UserQueryMetadata {
+  total_records: Int!
+  pageNumber: Int!
+  pageSize: Int!
+}
+
+type UserQueryResult {
+  users: [User!]!
+  metadata: UserQueryMetadata!
+}
+
+type Query {
+  getUserById(id: Int!): User
+  getUsers(pageNumber: Int, pageSize: Int): UserQueryResult!
+}
+
+type Mutation {
+  createUser(createUserData: CreateUserInput!): User!
+  updateUser(updateUserData: updateUserInput!): User!
+  createUserSettings(createUserSettingsData: CreateUserSettingsInput!): UserSetting!
+}
+
+input CreateUserInput {
+  username: String!
+  displayName: String
+}
+
+input updateUserInput {
+  id: Float!
+  username: String!
+  displayName: String
+}
+
+input CreateUserSettingsInput {
+  userId: Int!
+  receiveNotifications: Boolean = false
+  receiveEmails: Boolean = false
+}
+
+type Subscription {
+  userCreated(createUserData: CreateUserInput!): User!
+  userUpdated(updateUserData: updateUserInput!): User!
+}
