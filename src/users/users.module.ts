@@ -1,44 +1,4 @@
-// import { Module } from '@nestjs/common';
-// import { TypeOrmModule } from '@nestjs/typeorm';
-// import { UserResolver } from './UserResolver';
-// import { UserService } from './UserService';
-// import { User } from "../entites/user.entity"
-// import { UserSettingService } from './UserSettingService';
-// import { UserSetting } from "../entites/userSetting.entity"
-// import { UserSettingsResolver } from '../graphql/resolvers/UserSettingsResolver';
 
-// @Module({
-//   imports: [TypeOrmModule.forFeature([User, UserSetting])],
-//   providers: [
-//     UserResolver,
-//     UserService,
-//     UserSettingService,
-//     UserSettingsResolver,
-//   ],
-// })
-// export class UsersModule { }
-// users/users.module.ts
-// import { Module } from '@nestjs/common';
-// import { TypeOrmModule } from '@nestjs/typeorm';
-// import { UserResolver } from './UserResolver';
-// import { UserService } from './UserService';
-// import { User } from "../entites/user.entity"
-// import { UserSettingService } from './UserSettingService';
-// import { UserSetting } from "../entites/userSetting.entity"
-// import { UserSettingsResolver } from '../graphql/resolvers/UserSettingsResolver';
-
-// @Module({
-//   imports: [TypeOrmModule.forFeature([User, UserSetting])],
-//   providers: [
-//     UserResolver,
-//     UserService,
-//     UserSettingService,
-//     UserSettingsResolver,
-//   ],
-// })
-// export class UsersModule { }
-
-// users / users.module.ts
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserResolver } from './UserResolver';
@@ -67,24 +27,4 @@ import { PubSub } from 'graphql-subscriptions';
   ],
 })
 export class UsersModule { }
-// users/users.module.ts
-// users/users.module.ts
-// import { Module } from '@nestjs/common';
-// import { TypeOrmModule } from '@nestjs/typeorm';
-// import { UserResolver } from './UserResolver';
-// import { UserService } from './UserService';
-// import { User } from '../entites/user.entity';
-// import { UserSettingService } from './UserSettingService';
-// import { UserSetting } from '../entites/userSetting.entity';
-// import { UserSettingsResolver } from '../graphql/resolvers/UserSettingsResolver';
 
-// @Module({
-//   imports: [TypeOrmModule.forFeature([User, UserSetting])], // Include the necessary entities
-//   providers: [
-//     UserResolver,
-//     UserService,
-//     UserSettingService,
-//     UserSettingsResolver,
-//   ],
-// })
-// export class UsersModule { }
